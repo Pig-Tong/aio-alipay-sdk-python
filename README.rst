@@ -21,6 +21,10 @@ Issues
 
 注：为了提高开发者问题的响应时效，github本身的issue功能已关闭，支付宝开放社区中发帖的问题，通常会在2小时内响应。
 
+Installation
+----------------
+``pip3 install aio-alipay-sdk-python``
+
 
 Example
 ----------------

@@ -10,18 +10,17 @@ import platform
 import logging
 import codecs
 
-
 """
 setup module for core.
-Created on 5/23/2018
-@author: antopen
+Created on 12/12/2012
+@author: zhut96
 """
 PACKAGE = "aio-alipay"
 NAME = "aio-alipay-sdk-python"
 DESCRIPTION = "The official Aliyun SDK for Python."
 AUTHOR = "zhut96"
 AUTHOR_EMAIL = "zhut96@outlook.com"
-URL = "https://github.com/alipay/alipay-sdk-python-all"
+URL = "https://github.com/Pig-Tong/aio-alipay-sdk-python"
 
 TOPDIR = os.path.dirname(__file__) or "."
 VERSION = __import__(PACKAGE).__version__
@@ -32,7 +31,7 @@ try:
 finally:
     desc_file.close()
 
-requires = ["pycryptodome","rsa"]
+requires = ["aiohttp", "alipay-sdk-python"]
 
 setup(
     name=NAME,
@@ -43,7 +42,7 @@ setup(
     author_email=AUTHOR_EMAIL,
     license="Apache",
     url=URL,
-    keywords=["alipay", "sdk"],
+    keywords=["alipay", "sdk", "aio"],
     packages=find_packages(exclude=["tests*"]),
     include_package_data=True,
     platforms='any',

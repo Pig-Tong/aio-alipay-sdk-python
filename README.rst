@@ -107,7 +107,7 @@ Example
         # 执行请求，执行过程中如果发生异常，会抛出，请打印异常栈
         response_content = None
         try:
-            response_content = client.execute(request)
+            response_content = await client.execute(request)
         except Exception as e:
             print(traceback.format_exc())
         if not response_content:

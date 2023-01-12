@@ -15,7 +15,7 @@ setup module for core.
 Created on 12/12/2012
 @author: zhut96
 """
-PACKAGE = "aio-alipay"
+PACKAGE = "aio_alipay"
 NAME = "aio-alipay-sdk-python"
 DESCRIPTION = "The official Aliyun SDK for Python."
 AUTHOR = "zhut96"

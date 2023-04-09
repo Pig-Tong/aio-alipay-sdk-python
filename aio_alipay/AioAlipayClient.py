@@ -18,6 +18,8 @@ class AioAlipayClient(DefaultAlipayClient):
 
     def __init__(self, alipay_client_config, logger=None):
         super().__init__(alipay_client_config, logger)
+        self.__config = alipay_client_config
+        self.__logger = logger
 
     async def execute(self, request):
         THREAD_LOCAL.uuid = str(uuid.uuid1())

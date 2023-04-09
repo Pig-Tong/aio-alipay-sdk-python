@@ -13,6 +13,7 @@ from alipay.aop.api.util.WebUtils import get_http_connection, url_encode, MultiP
 
 async def do_post(url, query_string=None, headers=None, params=None, charset='utf-8', timeout=15):
     url, connection = get_http_connection(url, query_string, timeout)
+    connection = aiohttp.TCPConnector(limit=100)
     body = None
     if params:
         body = url_encode(params, charset)
@@ -30,7 +31,7 @@ async def do_post(url, query_string=None, headers=None, params=None, charset='ut
 
 async def do_multipart_post(url, query_string=None, headers=None, params=None, multipart_params=None, charset='utf-8', timeout=30):
     url, connection = get_http_connection(url, query_string, timeout)
-
+    connection = aiohttp.TCPConnector(limit=100)
     form = MultiPartForm(charset)
     for key, value in params.items():
         form.add_field(key, value)
